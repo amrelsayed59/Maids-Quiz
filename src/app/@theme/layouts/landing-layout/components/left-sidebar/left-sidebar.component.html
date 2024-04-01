@@ -1,0 +1,15 @@
+<div class="sidebar">
+  <p class="font-weight-bold px-1">left-sidebar works!</p>
+  <ul class="list-unstyled px-1">
+    <li class="py-1 pointer">
+      <a [routerLink]="['/campaign/dashboard']">
+        {{ translationPrefix + "dashboard" | translate }}
+      </a>
+    </li>
+    <li class="py-1 pointer">
+      <a [routerLink]="['/campaign/teams']">
+        {{ translationPrefix + "campaignTeam" | translate }}
+      </a>
+    </li>
+  </ul>
+</div>

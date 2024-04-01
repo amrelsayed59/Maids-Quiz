@@ -1,0 +1,33 @@
+$green-color: #00b59c;
+$gray-1: #ffffff;
+$gray-2: #f2f2f2;
+$gray-3: #e7e7e7;
+$gray-4: #bdbdbd;
+$gray-5: #e0e0e0;
+$gray-7: #828282;
+$gray-9: #333333;
+
+$dark-blue: #7891c0;
+$medium-green: #64a175;
+$green-text: #758173;
+$black: #000000;
+$white: #ffffff;
+$warm-gray: #f7f4ef;
+$pale-yellow: #fce6b1;
+$pale-blue: #f0f2ff;
+$light-blue: #d3dafe;
+$cream-dark: #c4b69d;
+$text-dark: #13213c;
+$orange: #f2994a;
+$primary-400: #97c680;
+$primary-900: #1e1e2f;
+$secondary-900: #1e1e2f;
+
+@mixin textGredient($degree, $first_color, $second_color) {
+    background-image: linear-gradient($degree, $first_color, $second_color);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}

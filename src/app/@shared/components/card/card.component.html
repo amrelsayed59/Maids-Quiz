@@ -1,0 +1,36 @@
+<div class="card-container">
+  <ng-container *ngFor="let item of dataList">
+    <mat-card class="main-card" (click)="routeToDetails(item.id)" [@cardAnimation]>
+      <mat-card-header>
+        <div class="card-id">ID: {{ item.id }}</div>
+        <mat-card-title>{{ item.first_name }}</mat-card-title>
+        <mat-card-subtitle>{{ item.last_name }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="item.avatar" alt="Img" />
+      <mat-card-content>
+        {{ item.email }}
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
+
+<div class="pagination">
+  <button
+    class="page-button"
+    (click)="prevPage()"
+    [disabled]="currentPage === 1"
+  >
+    {{ "GENERAL.PREV" | translate }}
+  </button>
+  <span class="page-info"
+    >{{ "GENERAL.PAGE" | translate }} {{ currentPage }}
+    {{ "GENERAL.OF" | translate }} {{ totalPages }}</span
+  >
+  <button
+    class="page-button"
+    (click)="nextPage()"
+    [disabled]="currentPage === totalPages"
+  >
+    {{ "GENERAL.NEXT" | translate }}
+  </button>
+</div>

@@ -1,0 +1,13 @@
+<div class="container-fluid p-0">
+  <mat-drawer-container>
+    <mat-drawer-content
+      [ngClass]="{ 'sidenav-collapsed': collapsedNav && !mobileQuery.matches }"
+      appRtl
+    >
+      <section>
+        <app-header></app-header>
+        <ng-content select="router-outlet"></ng-content>
+      </section>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

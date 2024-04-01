@@ -1,0 +1,84 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.main-card {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.main-card:hover {
+  transform: translateY(-5px);
+}
+
+.mat-card-header,
+.mat-card-content {
+  padding: 12px;
+}
+
+.mat-card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  font-size: 16px;
+  color: #666;
+}
+
+.mat-card-image {
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-id {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4caf50;
+  padding: 5px 10px;
+  border-radius: 0px 0px 0px 10px;
+  z-index: 1;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page-button:disabled {
+  background-color: #ccc; /* Change color to gray */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
+.page-info {
+  margin: 0 10px;
+  font-size: 16px;
+}

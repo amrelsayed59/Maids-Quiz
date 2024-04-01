@@ -1,0 +1,53 @@
+<header
+  class="header d-flex justify-content-between align-items-center shadow-sm"
+>
+<mat-toolbar class="w-auto bg-white">
+  <mat-toolbar-row>
+    <!-- Other header content here -->
+    <mat-form-field class="search-field">
+      <input
+        matInput
+        placeholder="Search by User ID"
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="searchTermChanged.next($event)"
+      />
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+  <!-- language and search bar -->
+  <div class="language-side">
+    <div [matMenuTriggerFor]="menu" class="langugae-toggle-item d-flex">
+      <div class="current-lang-item">
+        <img
+          [src]="selectedLanguageName.langIcon"
+          [alt]="selectedLanguageName.langFilePrifix"
+          width="25"
+          height="25"
+        />
+        <span class="ml-1 mr-1 px-1">{{
+          translationPrefix + selectedLanguageName.langName | translate
+        }}</span>
+      </div>
+      <span> <mat-icon>arrow_drop_down</mat-icon></span>
+    </div>
+    <mat-menu #menu="matMenu">
+      <div
+        mat-menu-item
+        class="lang-item"
+        *ngFor="let lang of appLanguages"
+        (click)="changeLang(lang.langFilePrifix)"
+      >
+        <img
+          [src]="lang.langIcon"
+          [alt]="lang.langFilePrifix"
+          width="25"
+          height="25"
+          class="ml-1 mr-1"
+        />
+        <span> {{ translationPrefix + lang.langName | translate }}</span>
+        <mat-divider> </mat-divider>
+      </div>
+    </mat-menu>
+  </div>
+</header>

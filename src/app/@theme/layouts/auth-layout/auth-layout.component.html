@@ -1,0 +1,40 @@
+<div class="container-fluid p-0">
+  <!-- language and search bar -->
+  <div class="language-side">
+    <div [matMenuTriggerFor]="menu" class="langugae-toggle-item">
+      <div class="current-lang-item">
+        <img
+          [src]="selectedLanguageName.langIcon"
+          [alt]="selectedLanguageName.langFilePrifix"
+          width="25"
+          height="25"
+        />
+        <span class="ml-1 mr-1">{{
+          translationPrifix + selectedLanguageName.langName | translate
+        }}</span>
+      </div>
+      <span> <mat-icon>arrow_drop_down</mat-icon></span>
+      <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+    </div>
+    <mat-menu #menu="matMenu">
+      <div
+        mat-menu-item
+        class="lang-item"
+        *ngFor="let lang of appLanguages"
+        (click)="changeLang(lang.langFilePrifix)"
+      >
+        <img
+          [src]="lang.langIcon"
+          [alt]="lang.langFilePrifix"
+          width="25"
+          height="25"
+          class="ml-1 mr-1"
+        />
+        <span> {{ translationPrifix + lang.langName | translate }}</span>
+        <mat-divider> </mat-divider>
+      </div>
+    </mat-menu>
+  </div>
+
+  <ng-content select="router-outlet"></ng-content>
+</div>

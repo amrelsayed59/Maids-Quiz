@@ -1,0 +1,21 @@
+{
+  "GENERAL": {
+    "NEXT": "Next",
+    "PAGE": "Page",
+    "OF": "of",
+    "PREV": "Previous",
+    "BACKTOLIST": "Back To List"
+  },
+  "PAGES": {
+    "NAVBAR": {
+      "INPUTS": {
+        "language": "Language",
+        "arabic": "Arabic",
+        "english": "English",
+        "dashboard": "Dashboard",
+        "campaignTeam": "Campaign Team",
+        "main-menu": "Main Menu"
+      }
+    }
+  }
+}

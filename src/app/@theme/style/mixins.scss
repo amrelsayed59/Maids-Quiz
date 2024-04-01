@@ -1,0 +1,29 @@
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content;
+    }
+    :-moz-placeholder {
+        @content;
+    }
+    ::-moz-placeholder {
+        @content;
+    }
+    :-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin toRem($property, $value1, $value2: '') {
+    @if $value2 != '' {
+        #{$property}: ($value1 / 16) + rem ($value2 / 16) + rem;
+    } @else {
+        #{$property}: ($value1 / 16) + rem;
+    }
+}
+@mixin toEm($property, $value1, $value2: '') {
+    @if $value2 != '' {
+        #{$property}: ($value1 / 16) + em ($value2 / 16) + em;
+    } @else {
+        #{$property}: ($value1 / 16) + em;
+    }
+}
